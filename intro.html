@@ -23,7 +23,7 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,11 +72,11 @@
                     <h2 class="section-heading">What is a nondeterministic finite automata?</h2>
                     <hr class="light">
                     <p class="text-faded">A NFA is a nondeterministic machine, which means several choices may exist for the next state at any point. To not get confused with DFAs (deterministic finite automatas), here is the formal definition of a NFA: </p>
-                        <li>Q : finite set of states</li>
-                        <li>Σ : alphabet</li>
-                        <li>q0 : start state</li>
-                        <li>F : set of accepting/final states</li>
-                        <li>δ : transition function: δ : Q x Σε → P(Q) [power set], including ε, and mapping to a set of states (including ∅)</li>
+                        <li class="fix-padding">Q : finite set of states</li>
+                        <li class="fix-padding">Σ : alphabet</li>
+                        <li class="fix-padding">q0 : start state</li>
+                        <li class="fix-padding">F : set of accepting/final states</li>
+                        <li class="fix-padding">δ : transition function: δ : Q x Σε → P(Q) [power set], including ε, and mapping to a set of states (including ∅)</li>
                         <br>
                     <p class="text-faded">The NFA is accepted if there exists some path through the NFA to an accepting state (almost as if the NFA guesses the path).</p>
                 </div>
@@ -112,7 +112,8 @@
                     <h2 class="section-heading">How are they related?</h2>
                     <hr class="light">
                     <p class="text-faded">Regular expressions and finite automata are equivalent in their descriptive power. Any regular expression can be converted into a finite automaton that recognizes the language it describes, and vice versa.</p>
-                    <a href="examples.html" class="btn btn-default btn-xl sr-button">See examples</a>
+                    <a href="nfa_to_regex.html" class="btn btn-default btn-xl sr-button">Learn more about converting NFA to regex</a><br><br>
+                    <a href="regex_to_nfa.html" class="btn btn-default btn-xl sr-button">Learn more about converting regex to NFA</a>
                 </div>
             </div>
         </div>
@@ -130,7 +131,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
+    <script src="js/creative.js"></script>
 
 </body>
 
