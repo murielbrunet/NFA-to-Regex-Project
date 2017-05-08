@@ -69,10 +69,50 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Introduction</h2>
+                    <h2 class="section-heading">What is a nondeterministic finite automata?</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                    <p class="text-faded">A NFA is a nondeterministic machine, which means several choices may exist for the next state at any point. To not get confused with DFAs (deterministic finite automatas), here is the formal definition of a NFA: </p>
+                        <li>Q : finite set of states</li>
+                        <li>Σ : alphabet</li>
+                        <li>q0 : start state</li>
+                        <li>F : set of accepting/final states</li>
+                        <li>δ : transition function: δ : Q x Σε → P(Q) [power set], including ε, and mapping to a set of states (including ∅)</li>
+                        <br>
+                    <p class="text-faded">The NFA is accepted if there exists some path through the NFA to an accepting state (almost as if the NFA guesses the path).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">What is a regular expression?</h2>
+                    <hr class="primary">
+                    <p>In arithmetic, we can use the operations + and x to build up expressions such as (5+3) x 4. Similarly, we can use the regular operations to build up expressions describing languages, which are called regular expressions. Here's an example: (0U1)0*.</p>
+
+                    <p>The formal definition of a regex is:</p>
+                    Say that <i>R</i> is a regular expression if <i>R</i> is
+                    <li><i>a</i> for some <i>a</i> in the alphabet Σ,</li>
+                    <li>ε,</li>
+                    <li>∅ (empty set),</li>
+                    <li>(R1 U R2), where R1 and R2 are regular expressions,</li>
+                    <li>(R1 o R2), where R1 and R2 are regular expressions, or</li>
+                    <li>(R1*), where R1 is a regular expression.</li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">How are they related?</h2>
+                    <hr class="light">
+                    <p class="text-faded">Regular expressions and finite automata are equivalent in their descriptive power. Any regular expression can be converted into a finite automaton that recognizes the language it describes, and vice versa.</p>
+                    <a href="examples.html" class="btn btn-default btn-xl sr-button">See examples</a>
                 </div>
             </div>
         </div>
