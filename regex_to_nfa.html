@@ -59,7 +59,7 @@
                         <a class="page-scroll" href="regex_to_nfa.html">Regex to NFA</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="regex_to_nfa.html">References</a>
+                        <a class="page-scroll" href="references.html">References</a>
                     </li>
                 </ul>
             </div>
@@ -72,10 +72,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Conclusion</h2>
+                    <h2 class="section-heading">Converting regex to NFA</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                    <p class="text-faded">Given a regex, we can convert it to a NFA using Thompson's Algorithm.</p>
+
+                    <ol class="regex-nfa">
+                        <li>The NFA representing the empty string is: </li>
+                        <li>If the regular expression is just a character, eg. <i>a</i>, then the corresponding NFA is : </li>
+                        <li>The union operator is represented by a choice of transitions from a node; thus <i>a|b</i> can be represented as: </li>
+                        <li>Concatenation simply involves connecting one NFA to the other; eg. <i>ab</i> is: </li>
+                        <li>The Kleene closure must allow for taking zero or more instances of the letter from the input; thus <i>a*</i> looks like: </li>
+                    </ol>
+
+                    <p class="text-faded">Here is an example of how to apply these rules:</p>
+
+                    Click below to see more examples for you to practice:<br>
+                    <a href="regex_to_nfa.html" class="btn btn-default btn-xl sr-button">Learn more</a>
                 </div>
             </div>
         </div>

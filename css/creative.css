@@ -48,6 +48,20 @@ p {
   padding-left: 25%;
 }
 
+.regex-nfa {
+  text-align: left;
+  padding-left: 20%;
+  padding-right: 18%;
+}
+
+.links-text {
+  color: black;
+}
+
+.links-text:hover{
+  color: yellow;
+}
+
 .bg-primary {
   background-color: #F05F40;
 }
