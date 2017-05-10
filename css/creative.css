@@ -49,6 +49,18 @@ p {
   padding-right: 18%;
 }
 
+.img-size{
+  width: 70%;
+  height: auto;
+  padding: 15px;
+}
+
+.img-size2{
+  width: 110%;
+  height: auto;
+  padding: 15px;
+}
+
 .boxed{
   width: 60%;
   padding: 50px;
