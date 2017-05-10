@@ -74,13 +74,18 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">What is a nondeterministic finite automata?</h2>
                     <hr class="light">
-                    <p class="text-faded">A NFA is a nondeterministic machine, which means several choices may exist for the next state at any point. To not get confused with DFAs (deterministic finite automatas), here is the formal definition of a NFA: </p>
-                        <li class="fix-padding">Q : finite set of states</li>
-                        <li class="fix-padding">Σ : alphabet</li>
-                        <li class="fix-padding">q0 : start state</li>
-                        <li class="fix-padding">F : set of accepting/final states</li>
-                        <li class="fix-padding">δ : transition function: δ : Q x Σε → P(Q) [power set], including ε, and mapping to a set of states (including ∅)</li>
-                        <br>
+                    <p class="text-faded">A NFA is a nondeterministic machine, which means several choices may exist for the next state at any point. To not get confused with DFAs, here is the formal definition of a NFA.</p>
+
+                    <center><div class="boxed-2">
+                        <p>A nondeterministic finite automaton is a 5-tuple (Q, Σ, δ, q0, F), where</p>
+                        <li class="fix-padding">Q is a finite set of states,</li>
+                        <li class="fix-padding">Σ is a finite alphabet</li>
+                        <li class="fix-padding">δ : Q x Σε → P(Q) is the transition function,</li>
+                        <li class="fix-padding">q0 ∈ Q is the start state, and </li>
+                        <li class="fix-padding">F ⊆ Q is the set of accept states.</li>
+                        
+                    </div></center>
+                    <br>
                     <p class="text-faded">The NFA is accepted if there exists some path through the NFA to an accepting state (almost as if the NFA guesses the path).</p>
                 </div>
             </div>
@@ -95,14 +100,19 @@
                     <hr class="primary">
                     <p>In arithmetic, we can use the operations + and x to build up expressions such as (5+3) x 4. Similarly, we can use the regular operations to build up expressions describing languages, which are called regular expressions. Here's an example: (0U1)0*.</p>
 
+                    <center><div class="boxed">
                     <p>The formal definition of a regex is:</p>
                     Say that <i>R</i> is a regular expression if <i>R</i> is
-                    <li class="fix-padding"><i>a</i> for some <i>a</i> in the alphabet Σ,</li>
-                    <li class="fix-padding">ε,</li>
-                    <li class="fix-padding">∅ (empty set),</li>
-                    <li class="fix-padding">(R1 U R2), where R1 and R2 are regular expressions,</li>
-                    <li class="fix-padding">(R1 o R2), where R1 and R2 are regular expressions, or</li>
-                    <li class="fix-padding">(R1*), where R1 is a regular expression.</li>
+                    <ol class="fix-padding">
+                        <li><i>a</i> for some <i>a</i> in the alphabet Σ,</li>
+                    <li>ε,</li>
+                    <li>∅ (empty set)</li>
+                    <li>(R1 ∪ R2), where R1 and R2 are regular expressions,</li>
+                    <li>(R1 o R2), where R1 and R2 are regular expressions, or</li>
+                    <li>(R1*), where R1 is a regular expression.</li></ol>
+                    <br>
+                    <p>In items 1 and 2, the regular expressions <i>a</i> and <i>ε</i> represent the languages {<i>a</i>} and {<i>ε</i>}, respectively. In item 3, the regular expression ∅ represents the empty language. In items 4, 5, and 6, the expressions represent the languages obtained by taking the union or concatenation of the languages R1 and R2, or the star of R1, resepectively. </p>
+                </div></center>
                 </div>
             </div>
         </div>
