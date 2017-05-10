@@ -5,4 +5,5 @@ A series of web pages for users to learn how to convert a nondeterministic finit
 ## Credits
 
 Website template from [Start Bootstrap](http://startbootstrap.com/) - [Creative](http://startbootstrap.com/template-overviews/creative/)
+
 Created and modified by Muriel Brunet and Jenny Huang
