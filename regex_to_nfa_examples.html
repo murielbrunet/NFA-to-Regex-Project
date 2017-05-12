@@ -115,6 +115,93 @@
                         <span class="sr-only">Next</span>
                       </a>
                     </div>
+
+                    <p>Practice Problem 2</p>
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel" data-interval="false">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel2" data-slide-to="1"></li>
+                        <li data-target="#myCarousel2" data-slide-to="2"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <center><img src="img/regexToNFA/ex3.0.png" class="img-size3"><br><p class="car-text"></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex3.1.png" class="img-size3"><br><p class="car-text">First, we will look at just <i>a</i>. This is the NFA for regex: a.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex3.2.png" class="img-size3"><br><p class="car-text">Then we will look at just <i>b</i>. This is the NFA for regex: b.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex3.3.png" class="img-size3"><br><p class="car-text">Then we will concatenate a and b together, by adding an ε arc.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex3.4.png" class="img-size3"><br><p class="car-text">For the union of two expressions, we need ε arcs. The union symbol is similar to <i>boolean or</i>.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex3.5.png" class="img-size3"><br><p class="car-text">Lastly, the Kleene star means to recurse the regex inside the parentheses of the star, so we add ε arcs to go back to the beginning of the NFA.</p></center>
+                        </div>
+
+                      </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+
+                    <p>Practice Problem 3</p>
+                    <div id="myCarousel3" class="carousel slide" data-ride="carousel" data-interval="false">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel3" data-slide-to="1"></li>
+                        <li data-target="#myCarousel3" data-slide-to="2"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <center><img src="img/regexToNFA/ex2.0.png" class="img-size3"><br><p class="car-text"></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex2.1.png" class="img-size3"><br><p class="car-text">First, we will look at just the <i>*</i>. This is the NFA for regex: *. <i>The * means 0 or more copies.</i></p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex2.2.png" class="img-size3"><br><p class="car-text">Then we will add the <i>0+</i> with the *, and get a NFA that looks like this. <i>The + symbol means at least 1 or more copies.</i></p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex2.3.png" class="img-size3"><br><p class="car-text">Lastly, we will add the 1 back in, and get a NFA that looks like this.</p></center>
+                        </div>
+                      </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel3" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel3" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
                 </div>
             </div>
         </div>
