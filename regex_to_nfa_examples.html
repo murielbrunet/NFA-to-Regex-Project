@@ -75,7 +75,8 @@
                     <h2 class="section-heading">Practice Problems for Regex to NFA</h2>
                     <hr class="light">
 
-                    <p>Here are some practice problems. Try to convert the regex to a NFA; use the right and left arrows for help.
+                    <p>Here are some practice problems. Try to convert the regex to a NFA; use the right and left arrows for help.<br><br>
+                        *Disclaimer: There are many other ways to generate a NFA from regex, we only show one of the possible solution(s).</p>
 
                     <p class="text-faded">Practice Problem 1</p>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -176,19 +177,27 @@
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner">
                         <div class="item active">
-                          <center><img src="img/regexToNFA/ex2.0.png" class="img-size3"><br><p class="car-text"></center>
+                          <center><img src="img/regexToNFA/ex4.0.png" class="img-size3"><br><p class="car-text"></center>
                         </div>
 
                         <div class="item">
-                          <center><img src="img/regexToNFA/ex2.1.png" class="img-size3"><br><p class="car-text">First, we will look at just the <i>*</i>. This is the NFA for regex: *. <i>The * means 0 or more copies.</i></p></center>
+                          <center><img src="img/regexToNFA/ex4.1.png" class="img-size3"><br><p class="car-text">First, we will look at just <i>a*</i>. This is the NFA for regex: a*. <i>The * means 0 or more copies.</i></p></center>
                         </div>
 
                         <div class="item">
-                          <center><img src="img/regexToNFA/ex2.2.png" class="img-size3"><br><p class="car-text">Then we will add the <i>0+</i> with the *, and get a NFA that looks like this. <i>The + symbol means at least 1 or more copies.</i></p></center>
+                          <center><img src="img/regexToNFA/ex4.2.png" class="img-size3"><br><p class="car-text">Then we will look at just <i>b</i>. This is the NFA for regex: b.</p></center>
                         </div>
 
                         <div class="item">
-                          <center><img src="img/regexToNFA/ex2.3.png" class="img-size3"><br><p class="car-text">Lastly, we will add the 1 back in, and get a NFA that looks like this.</p></center>
+                          <center><img src="img/regexToNFA/ex4.3.png" class="img-size3"><br><p class="car-text">Then we will look at just <i>c</i>. This is the NFA for regex: c.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex4.4.png" class="img-size3"><br><p class="car-text">Next, we will concatenate b and c, by combining the 2 previous NFAs together.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex4.5.png" class="img-size3"><br><p class="car-text">Lastly, we will combine all the previous NFAs together, getting with this outcome.</p></center>
                         </div>
                       </div>
 
