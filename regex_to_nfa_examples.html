@@ -75,16 +75,46 @@
                     <h2 class="section-heading">Practice Problems for Regex to NFA</h2>
                     <hr class="light">
 
-                    <ol class="regex-nfa">
-                        <li>Example 1</li>
-                        <li>Example 2</li>
-                        <li>Example 3</li>
-                        <li>Example 4</li>
-                        <li>Example 5</li>
-                    </ol>
+                    <p>Here are some practice problems. Try to convert the regex to a NFA; use the right and left arrows for help.
 
-                    Click below to learn how to convert NFA to regex!<br>
-                    <a href="nfa_to_regex.html" class="btn btn-default btn-xl sr-button">Learn more</a>
+                    <p>Practice Problem 1</p>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <center><img src="img/regexToNFA/ex2.0.png" class="img-size3"><br><p class="car-text"></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex2.1.png" class="img-size3"><br><p class="car-text">First, we will look at just the <i>*</i>. This is the NFA for regex: *. <i>The * means 0 or more copies.</i></p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex2.2.png" class="img-size3"><br><p class="car-text">Then we will add the <i>0+</i> with the *, and get a NFA that looks like this. <i>The + symbol means at least 1 or more copies.</i></p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex2.3.png" class="img-size3"><br><p class="car-text">Lastly, we will add the 1 back in, and get a NFA that looks like this.</p></center>
+                        </div>
+                      </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
                 </div>
             </div>
         </div>
