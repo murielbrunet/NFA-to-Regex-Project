@@ -81,15 +81,20 @@
 
                     <ol class="nfa-regex" style="text-align: left;">
                         <li>Below is the NFA we will convert to a regular expression.<br>
-                            <img src="img/NFAtoRegex/ex1.0.png" class="img-size4"></li>
+                        <img src="img/NFAtoRegex/ex1.0.png" class="img-size4"></li>
+
                         <li>First, add a Kleene star to the loops on states 0 and 2. Because the arc loops back to the same state, you can have zero or more of the chosen character, indicated by the star.<br> 
                         <img src="img/NFAtoRegex/ex1.1.png" class="img-size4"></li>
+
                         <li>Next, we will prepare to delete state 0. State 0 forms a loop to and from state 1. We add this loop to state 1, indicating the regex needed to travel from state 1 to state 0 > <i>a</i>, through state 0 > <i>b*</i>, and back to state 1 > <i>a</i> to form <i>ab*a</i>.<br>
                         <img src="img/NFAtoRegex/ex1.2.png" class="img-size4"></li>
+
                         <li>Now we will perform the same operation to remove state 2. From state 1 > <i>b</i> to state 2 > <i>a*</i> back to state 1 > <i>b</i> to form a loop with <i>ba*b.</i><br>
                         <img src="img/NFAtoRegex/ex1.3.png" class="img-size4"></li>
+
                         <li>We will now continue to work to delete state 0. Combine the loop on state 0 with the arc leading to state 1 to form the regex <i>b*a.</i><br>
                         <img src="img/NFAtoRegex/ex1.4.png" class="img-size4"></li>
+
                         <li>Finally, we combine the arc leading from state 0 to state 1, the final state. We need <i>b*a</i> to travel from state 1 to state 0. Then we have two loops, which we connect with an <i>or</i> because we can either loop through the top loop or the bottom loop. Presto!<br>
                         <img src="img/NFAtoRegex/ex1.5.png" class="img-size4"></li>
                     </ol>
@@ -108,25 +113,25 @@
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner">
                         <div class="item active">
-                          <center><img src="img/regexToNFA/ex1.0.png" class="img-size3"><br><p class="car-text">Given a regex, we will now convert it to a NFA.</p></center>
+                          <center><img src="img/NFAtoRegex/ex4.0.png" class="img-size3"><br><p class="car-text">Given this NFA, we will create a regular expression.</p></center>
                         </div>
 
                         <div class="item">
-                          <center><img src="img/regexToNFA/ex1.1.png" class="img-size3"><br><p class="car-text">First, we will look at just <i>a</i>. This is the NFA for regex: a.</p></center>
+                          <center><img src="img/NFAtoRegex/ex4.1.png" class="img-size3"><br><p class="car-text">First, add the Kleene star to arcs looping back to the same state.</p></center>
                         </div>
 
                         <div class="item">
-                          <center><img src="img/regexToNFA/ex1.2.png" class="img-size3"><br><p class="car-text">Then we will look at just <i>b</i>. This is the NFA for regex: b.</p></center>
+                          <center><img src="img/NFAtoRegex/ex4.2.png" class="img-size3"><br><p class="car-text">Next, delete state 1 and combine its arcs to point from state 0 to state 3.</p></center>
                         </div>
 
                         <div class="item">
-                          <center><img src="img/regexToNFA/ex1.3.png" class="img-size3"><br><p class="car-text">Then, we will add the union symbol into the regex, combining a and b, which will lead to ε arcs. The union symbol is similar to <i>boolean or</i>.</p></center>
+                          <center><img src="img/NFAtoRegex/ex4.3.png" class="img-size3"><br><p class="car-text">Collapse the two arcs together by using an <i>or</i> since they are both pointing to the same state from the same state.</p></center>
                         </div>
 
                         <div class="item">
-                          <center><img src="img/regexToNFA/ex1.4.png" class="img-size3"><br><p class="car-text">The Kleene star means to recurse the regex inside the parentheses of the star, so we add ε arcs to go back to the beginning of the NFA.</p></center>
+                          <center><img src="img/NFAtoRegex/ex4.4.png" class="img-size3"><br><p class="car-text">Finally, combine your remaining two states to create this beautiful regular expression.</p></center>
                         </div>
-                      </div>
+                    </div>
 
                       <!-- Left and right controls -->
                       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -141,7 +146,7 @@
                     <br>
 
                     Click below to see more examples to practice:<br>
-                    <a href="regex_to_nfa_examples.html" class="btn btn-default btn-xl sr-button">Learn more</a>
+                    <a href="nfa_to_regex_examples.html" class="btn btn-default btn-xl sr-button" id="learnMoreButton">Learn more</a>
                 </div>
             </div>
         </div>

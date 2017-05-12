@@ -67,6 +67,17 @@ p {
   padding-right: 18%;
 }
 
+#learnMoreButton {
+  margin: 20px;
+}
+
+.problem {
+  margin-top: 100px;
+  color: white;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
 .img-size{
   width: 70%;
   height: auto;
@@ -93,7 +104,7 @@ p {
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 0px;
-  background-color: rgba(252, 147, 147, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .boxed{
