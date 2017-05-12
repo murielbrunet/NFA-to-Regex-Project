@@ -23,7 +23,7 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,7 +59,7 @@
                         <a class="page-scroll" href="regex_to_nfa.html">Regex to NFA</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="regex_to_nfa.html">References</a>
+                        <a class="page-scroll" href="references.html">References</a>
                     </li>
                 </ul>
             </div>
@@ -72,10 +72,81 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Examples</h2>
+                    <h2 class="section-heading">Converting NFA to Regex</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                    <center><div class="boxed-2">
+                    <p class="text-faded">Given a NFA, we can create a regular expression. Although there are several methods to do this, the most common for converting NFAs to Regex by hand is using state deletion. We systematically delete one state at a time while maintaining the overall structure of the NFA by building up the expressions on each arc until we are left with a single regular expression. <br> <br>
+                    The best way to understand this method is to work through an example. 
+                    </p>
+
+                    <ol class="nfa-regex" style="text-align: left;">
+                        <li>Below is the NFA we will convert to a regular expression.<br>
+                        <img src="img/NFAtoRegex/ex1.0.png" class="img-size4"></li>
+
+                        <li>First, add a Kleene star to the loops on states 0 and 2. Because the arc loops back to the same state, you can have zero or more of the chosen character, indicated by the star.<br> 
+                        <img src="img/NFAtoRegex/ex1.1.png" class="img-size4"></li>
+
+                        <li>Next, we will prepare to delete state 0. State 0 forms a loop to and from state 1. We add this loop to state 1, indicating the regex needed to travel from state 1 to state 0 > <i>a</i>, through state 0 > <i>b*</i>, and back to state 1 > <i>a</i> to form <i>ab*a</i>.<br>
+                        <img src="img/NFAtoRegex/ex1.2.png" class="img-size4"></li>
+
+                        <li>Now we will perform the same operation to remove state 2. From state 1 > <i>b</i> to state 2 > <i>a*</i> back to state 1 > <i>b</i> to form a loop with <i>ba*b.</i><br>
+                        <img src="img/NFAtoRegex/ex1.3.png" class="img-size4"></li>
+
+                        <li>We will now continue to work to delete state 0. Combine the loop on state 0 with the arc leading to state 1 to form the regex <i>b*a.</i><br>
+                        <img src="img/NFAtoRegex/ex1.4.png" class="img-size4"></li>
+
+                        <li>Finally, we combine the arc leading from state 0 to state 1, the final state. We need <i>b*a</i> to travel from state 1 to state 0. Then we have two loops, which we connect with an <i>or</i> because we can either loop through the top loop or the bottom loop. Presto!<br>
+                        <img src="img/NFAtoRegex/ex1.5.png" class="img-size4"></li>
+                    </ol>
+                </div></center><br>
+
+                    <p class="text-faded">Here is an example of how to apply these rules:</p><br>
+
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <center><img src="img/NFAtoRegex/ex4.0.png" class="img-size3"><br><p class="car-text">Given this NFA, we will create a regular expression.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/NFAtoRegex/ex4.1.png" class="img-size3"><br><p class="car-text">First, add the Kleene star to arcs looping back to the same state.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/NFAtoRegex/ex4.2.png" class="img-size3"><br><p class="car-text">Next, delete state 1 and combine its arcs to point from state 0 to state 3.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/NFAtoRegex/ex4.3.png" class="img-size3"><br><p class="car-text">Collapse the two arcs together by using an <i>or</i> since they are both pointing to the same state from the same state.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/NFAtoRegex/ex4.4.png" class="img-size3"><br><p class="car-text">Finally, combine your remaining two states to create this beautiful regular expression.</p></center>
+                        </div>
+                    </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                    <br>
+
+                    Click below to see more examples to practice:<br>
+                    <a href="nfa_to_regex_examples.html" class="btn btn-default btn-xl sr-button" id="learnMoreButton">Learn more</a>
                 </div>
             </div>
         </div>
@@ -93,7 +164,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/creative.js"></script>
+    <script src="js/creative.min.js"></script>
 
 </body>
 

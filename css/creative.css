@@ -67,8 +67,25 @@ p {
   padding-right: 18%;
 }
 
+#learnMoreButton {
+  margin: 20px;
+}
+
+.problem {
+  margin-top: 100px;
+  color: white;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
 .img-size{
   width: 70%;
+  height: auto;
+  padding: 15px;
+}
+
+.img-size2{
+  width: 110%;
   height: auto;
   padding: 15px;
 }
@@ -80,10 +97,14 @@ p {
   background-color: white;
 }
 
-.img-size2{
-  width: 110%;
+.img-size4{
+  width: 100%;
   height: auto;
   padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .boxed{
@@ -105,6 +126,8 @@ p {
   padding-left: 20%;
   padding-right: 18%;
 }
+
+
 
 .links-text {
   color: black;
