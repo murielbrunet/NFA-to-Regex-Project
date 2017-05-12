@@ -104,15 +104,23 @@
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner">
                         <div class="item active">
-                          <center><img src="img/NFAtoRegex/ex1.0.png" class="img-size3"><br><p class="car-text">Given a regex, we can convert it to a NFA using Thompson's Algorithm (one of the most common algorithms used for converting regex to NFA). The algorithm works recursively by splitting a regular expression into subexpressions, from which the NFA will be constructed using a set of rules</p></center>
+                          <center><img src="img/regexToNFA/ex1.0.png" class="img-size3"><br><p class="car-text">Given a regex, we will now convert it to a NFA.</p></center>
                         </div>
 
                         <div class="item">
-                          <center><img src="img/NFAtoRegex/ex1.1.png" class="img-size3"><br><p class="car-text">Given a regex, we can convert it to a NFA using Thompson's Algorithm (one of the most common algorithms used for converting regex to NFA).</p></center>
+                          <center><img src="img/regexToNFA/ex1.1.png" class="img-size3"><br><p class="car-text">First, we will look at just <i>a</i>. This is the NFA for regex: a.</p></center>
                         </div>
 
                         <div class="item">
-                          <center><img src="img/NFAtoRegex/ex1.2.png" class="img-size3"><br><p class="car-text">Common algorithms used for converting regex to NFA). The algorithm works recursively by splitting a regular expression into subexpressions, from which the NFA will be constructed using a set of rules.</p></center>
+                          <center><img src="img/regexToNFA/ex1.2.png" class="img-size3"><br><p class="car-text">Then we will look at just <i>b</i>. This is the NFA for regex: b.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex1.3.png" class="img-size3"><br><p class="car-text">Then, we will add the union sign into the regex, combining a and b, which will lead to ε arcs.</p></center>
+                        </div>
+
+                        <div class="item">
+                          <center><img src="img/regexToNFA/ex1.4.png" class="img-size3"><br><p class="car-text">The Kleene star means to recurse the regex inside the parentheses of the star, so we add ε arcs to go back to the beginning of the NFA.</p></center>
                         </div>
                       </div>
 
