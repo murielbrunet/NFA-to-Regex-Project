@@ -43,6 +43,24 @@ p {
   margin-bottom: 20px;
 }
 
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+.carousel-indicators li{
+  visibility: hidden;
+}
+
+.carousel-indicators .active{
+  visibility: hidden;
+}
+
+.car-text{
+  padding-top: 10px;
+  height: 125px;
+  width: 75%;
+}
+
 .fix-padding{
   text-align: left;
   padding-left: 18%;
@@ -53,6 +71,13 @@ p {
   width: 70%;
   height: auto;
   padding: 15px;
+}
+
+.img-size3{
+  width: 70%;
+  height: auto;
+  padding: 50px;
+  background-color: white;
 }
 
 .img-size2{
@@ -71,7 +96,7 @@ p {
 .boxed-2{
   width: 80%;
   padding: 50px;
-  border: 5px solid gray;
+  border: 5px solid white;
   margin: 0;
 }
 
